@@ -11,6 +11,7 @@ use Illuminate\View\Component;
 class Input extends Component
 {
     protected array $allowedTypes = ['text', 'email', 'password', 'url'];
+    protected array $allowedSize = ['small', 'middle', 'large'];
 
     public function __construct(
         public string $id = '',
@@ -18,6 +19,7 @@ class Input extends Component
         public string $name = '',
         public string $class = '',
         public string $style = '',
+        public string $size = 'middle',
         public string $placeholder = '',
         public bool $disabled = false
     ){
@@ -27,6 +29,15 @@ class Input extends Component
             if(!in_array($this->type, $this->allowedTypes)){
                 throw new \Exception("The type '$this->type' is not allowed. The allowed types are: " . implode(', ', $this->allowedTypes));
             }
+        }
+        if(in_array($this->size, $this->allowedSize)){
+            $this->class = match($this->size){
+                'small' => 'text-xs '.$this->class,
+                'middle' => 'text-sm '.$this->class,
+                'large' => 'text-lg '.$this->class,
+            };
+        }else{
+            throw new \Exception("The size '$this->size' is not allowed. The allowed sizes are: " . implode(', ', $this->allowedSize));
         }
     }
 
