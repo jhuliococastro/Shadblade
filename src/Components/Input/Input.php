@@ -18,6 +18,7 @@ class Input extends Component
         public string $name = '',
         public string $class = '',
         public string $style = '',
+        public string $placeholder = '',
         public bool $disabled = false
     ){
         if($this->id === '') $this->id = Str::random(20);
