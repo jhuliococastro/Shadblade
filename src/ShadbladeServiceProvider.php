@@ -10,6 +10,7 @@ use Castro\Shadblade\Components\Card\Content;
 use Castro\Shadblade\Components\Card\Description;
 use Castro\Shadblade\Components\Card\Footer;
 use Castro\Shadblade\Components\Input\Input;
+use Castro\Shadblade\Components\Label\Label;
 
 class ShadbladeServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,8 @@ class ShadbladeServiceProvider extends ServiceProvider
             'card-footer' => Footer::class,
 
             'input' => Input::class,
+
+            'label' => Label::class,
         ]);
     }
 
