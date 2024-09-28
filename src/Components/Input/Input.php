@@ -32,8 +32,8 @@ class Input extends Component
         }
         if(in_array($this->size, $this->allowedSize)){
             $this->class = match($this->size){
-                'small' => 'text-xs '.$this->class,
-                'middle' => 'text-sm '.$this->class,
+                'small' => 'text-sm '.$this->class,
+                'middle' => 'text-xs '.$this->class,
                 'large' => 'text-lg '.$this->class,
             };
         }else{
