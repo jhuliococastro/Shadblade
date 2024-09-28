@@ -4,6 +4,7 @@ namespace Castro\Shadblade\Components\Card;
 
 use Closure;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\View;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
 
@@ -23,6 +24,6 @@ class Description extends Component
 
     public function render(): ViewContract|Closure|string
     {
-        return view('shadblade::components.card.description');
+        return View::make('shadblade::components.card.description');
     }
 }
