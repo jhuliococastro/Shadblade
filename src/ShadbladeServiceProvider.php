@@ -9,6 +9,7 @@ use Castro\Shadblade\Components\Card\Title;
 use Castro\Shadblade\Components\Card\Content;
 use Castro\Shadblade\Components\Card\Description;
 use Castro\Shadblade\Components\Card\Footer;
+use Castro\Shadblade\Components\Button\Button;
 use Castro\Shadblade\Components\Input\Input;
 use Castro\Shadblade\Components\Label\Label;
 
@@ -28,6 +29,8 @@ class ShadbladeServiceProvider extends ServiceProvider
             'input' => Input::class,
 
             'label' => Label::class,
+
+            'button' => Button::class,
         ]);
     }
 
