@@ -36,6 +36,12 @@ class ShadbladeServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/Shadblade.php', 'shadblade'
+        );
         
+        $this->publishes([
+            __DIR__.'/../config/Shadblade.php' => $this->app->configPath('Shadblade.php'),
+        ]);
     }
 }
