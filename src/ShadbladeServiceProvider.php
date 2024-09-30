@@ -11,6 +11,7 @@ use Castro\Shadblade\Components\Card\Description;
 use Castro\Shadblade\Components\Card\Footer;
 use Castro\Shadblade\Components\Button\Button;
 use Castro\Shadblade\Components\Form\Form;
+use Castro\Shadblade\Components\Form\Item;
 use Castro\Shadblade\Components\Input\Input;
 use Castro\Shadblade\Components\Label\Label;
 
@@ -34,6 +35,7 @@ class ShadbladeServiceProvider extends ServiceProvider
             'button' => Button::class,
 
             'form' => Form::class,
+            'form-item' => Item::class,
         ]);
     }
 
