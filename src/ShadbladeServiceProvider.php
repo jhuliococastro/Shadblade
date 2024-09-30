@@ -10,6 +10,7 @@ use Castro\Shadblade\Components\Card\Content;
 use Castro\Shadblade\Components\Card\Description;
 use Castro\Shadblade\Components\Card\Footer;
 use Castro\Shadblade\Components\Button\Button;
+use Castro\Shadblade\Components\Form\Form;
 use Castro\Shadblade\Components\Input\Input;
 use Castro\Shadblade\Components\Label\Label;
 
@@ -31,6 +32,8 @@ class ShadbladeServiceProvider extends ServiceProvider
             'label' => Label::class,
 
             'button' => Button::class,
+
+            'form' => Form::class,
         ]);
     }
 
@@ -39,7 +42,7 @@ class ShadbladeServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/Shadblade.php', 'shadblade'
         );
-        
+
         $this->publishes([
             __DIR__.'/../config/Shadblade.php' => $this->app->configPath('Shadblade.php'),
         ]);

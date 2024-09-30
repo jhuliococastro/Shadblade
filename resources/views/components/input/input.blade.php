@@ -1,4 +1,4 @@
-<input 
+<input
     id="{{ $id }}"
     name="{{ $name }}"
     type="{{ $type }}"
